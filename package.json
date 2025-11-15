@@ -1,13 +1,18 @@
 {
   "name": "lodging-house-frontend",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "build:prod": "ng build --configuration=production",
     "test": "ng test",
-    "serve:ssr:lodging_house-frontend": "node dist/lodging_house-frontend/server/server.mjs"
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
   "prettier": {
     "printWidth": 100,
