@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lodging_house-frontend": {
+    "lodging_house-fronted": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -54,8 +54,8 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/lodging_house-fronted/",  
-              "deployUrl": "/lodging_house-fronted/"  
+              "baseHref": "/lodging_house-fronted/",
+              "deployUrl": "/lodging_house-fronted/"
             },
             "development": {
               "optimization": false,
@@ -69,10 +69,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "lodging_house-frontend:build:production"
+              "buildTarget": "lodging_house-fronted:build:production"
             },
             "development": {
-              "buildTarget": "lodging_house-frontend:build:development"
+              "buildTarget": "lodging_house-fronted:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,10 +100,10 @@
             ]
           }
         },
-        "deploy": { 
+        "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/lodging_house-frontend/"
+            "baseHref": "/lodging_house-fronted/"
           }
         }
       }
