@@ -1,0 +1,37 @@
+<div class="profile-container">
+  <h2>Mi Perfil</h2>
+
+  <div *ngIf="isLoading" class="loading">
+    Cargando perfil...
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="user && !isLoading" class="profile-info">
+    <div class="info-item">
+      <strong>ID:</strong> {{ user.id }}
+    </div>
+    <div class="info-item">
+      <strong>Nombre:</strong> {{ user.name }}
+    </div>
+    <div class="info-item">
+      <strong>Email:</strong> {{ user.email }}
+    </div>
+    <div class="info-item" *ngIf="user.phoneNumber">
+      <strong>Teléfono:</strong> {{ user.phoneNumber }}
+    </div>
+    <div class="info-item" *ngIf="user.birthDate">
+      <strong>Fecha de nacimiento:</strong> {{ user.birthDate | date:'longDate' }}
+    </div>
+  </div>
+
+  <button (click)="logout()" class="logout-btn">
+    Cerrar Sesión
+  </button>
+
+  <div class="back-link">
+    <a routerLink="/login">← Volver al login</a>
+  </div>
+</div>

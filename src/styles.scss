@@ -1,1 +1,208 @@
-/* You can add global styles to this file, and also import other style files */
+/* Y/* Importar fuente de Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Contenedores principales */
+.login-container,
+.register-container,
+.profile-container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Títulos */
+h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+p {
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* Formularios */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+
+  &:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+
+  &::placeholder {
+    color: #a0a4a8;
+  }
+}
+
+/* Botones */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  }
+
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  margin-top: 20px;
+
+  &:hover:not(:disabled) {
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+  }
+}
+
+/* Mensajes de error */
+.error-message {
+  color: #dc3545;
+  background-color: #ffe6e6;
+  border: 1px solid #ffcccc;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #667eea;
+  font-size: 16px;
+}
+
+/* Perfil */
+.profile-info {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 25px 0;
+}
+
+.info-item {
+  margin-bottom: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: #333;
+  }
+
+  span {
+    color: #666;
+  }
+}
+
+/* Links */
+.login-link,
+.register-link,
+.back-link {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+
+  a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: #666;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .login-container,
+  .register-container,
+  .profile-container {
+    margin: 20px auto;
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}

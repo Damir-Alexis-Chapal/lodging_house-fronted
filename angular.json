@@ -36,7 +36,8 @@
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
-            }
+            },
+            "outputPath": "dist/lodging_house-frontend"
           },
           "configurations": {
             "production": {
@@ -52,7 +53,9 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/lodging_house-frontend/",  
+              "deployUrl": "/lodging_house-frontend/"  
             },
             "development": {
               "optimization": false,
@@ -95,6 +98,12 @@
             "styles": [
               "src/styles.scss"
             ]
+          }
+        },
+        "deploy": { 
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/lodging_house-frontend/"
           }
         }
       }
