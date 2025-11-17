@@ -58,7 +58,12 @@ export class AuthService {
   }
 
   register(userData: any): Observable<User> {
-    return this.http.post<User>(`${this.baseUrl}/api/v1/users`, userData);
+    return this.http.post<User>(`${this.baseUrl}/api/v1/users`, userData, {
+      headers:{
+        'Content-Type': 'application/json'
+      }
+    }
+    );
   }
 
   getUserProfile(userId: string): Observable<User> {
